@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f3f5f8">
+    <title>Juego del gato</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <main class="game">
+        <header class="game__header">
+            <p class="eyebrow">JUEGO PARA DOS</p>
+            <h1>Gato</h1>
+            <p class="intro">Un clásico duelo de estrategia. ¡Que gane el mejor!</p>
+        </header>
+
+        <section class="scoreboard" aria-label="Marcador">
+            <div class="score">
+                <span class="score__player"><span class="mark mark--x">X</span> Jugador 1</span>
+                <strong id="score-x" class="score__value">0</strong>
+            </div>
+            <div class="score">
+                <span class="score__player"><span class="mark mark--o">O</span> Jugador 2</span>
+                <strong id="score-o" class="score__value">0</strong>
+            </div>
+        </section>
+
+        <section class="play-area" aria-label="Partida">
+            <p id="game-status" class="status" aria-live="polite">Turno del jugador 1 (X)</p>
+            <div id="game-board" class="board" role="group" aria-label="Tablero del gato"></div>
+        </section>
+
+        <div class="actions">
+            <button id="restart-round" class="button button--primary" type="button">Nueva ronda</button>
+            <button id="reset-game" class="button button--secondary" type="button">Reiniciar juego</button>
+        </div>
+        <p class="hint">Haz clic en una casilla para colocar tu marca.</p>
+    </main>
+</body>
+</html>
